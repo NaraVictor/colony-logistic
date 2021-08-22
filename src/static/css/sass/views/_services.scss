@@ -1,0 +1,19 @@
+@import "../common/colors";
+
+.service-title {
+	font-size: 3rem;
+	font-family: "GT Pressura Regular";
+	color: $color-primary-dark;
+
+	span {
+		display: block;
+		font-family: "GT Pressura Bold Italic";
+		color: $color-primary-shaded;
+	}
+}
+
+.section-service {
+	img {
+		height: 50vh;
+	}
+}

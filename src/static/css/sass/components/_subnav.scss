@@ -1,0 +1,29 @@
+@import "../common/colors";
+
+.sub-nav {
+	position: relative;
+	width: 100vw;
+	// top: 0;
+
+	//
+	z-index: 500;
+	padding: 2px 13vw;
+	font-size: 14px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: $color-primary-dark;
+
+	& a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.sub-nav {
+		padding: 5px;
+		justify-content: center;
+		align-items: center;
+	}
+}

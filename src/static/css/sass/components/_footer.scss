@@ -1,0 +1,11 @@
+@import "../common/colors";
+
+.footer {
+	background-color: $color-primary-dark;
+	font-size: 1rem;
+	color: #aaa !important;
+
+	& a {
+		color: #bbb !important;
+	}
+}

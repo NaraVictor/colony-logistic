@@ -1,0 +1,226 @@
+@import "./sass/common/colors";
+
+// components
+@import "./sass/components/card";
+@import "./sass/components/box";
+@import "./sass/components/footer";
+@import "./sass/components/navbar";
+@import "./sass/components/subnav";
+
+// views
+@import "./sass/views/about";
+@import "./sass/views/home";
+@import "./sass/views/services";
+@import "./sass/views/contact";
+
+// components
+@import "./sass/components/button";
+
+// mixins
+@mixin imgContainer {
+	max-width: 40vw;
+	height: 35vw;
+	background-color: $color-primary;
+	overflow: hidden;
+
+	& img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+@mixin imgContainerMobile {
+	max-width: 95vw;
+	height: 85vw;
+	background-color: $color-primary;
+	overflow: hidden;
+}
+
+@mixin imgBox {
+	max-width: 40vw;
+	height: 31vw;
+	background-color: $color-primary;
+	overflow: hidden;
+
+	& img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+// styles
+body {
+	font-size: 1.3rem;
+	background-color: $color-bg;
+	font-family: Helvetica, sans-serif;
+	width: 100%;
+	box-sizing: content-box;
+}
+
+.color-primary {
+	color: $color-primary;
+}
+
+.color-primary-dark {
+	color: $color-primary-dark;
+}
+
+.color-pink {
+	color: palevioletred;
+}
+.bg-color-primary {
+	background-color: $color-primary;
+}
+
+.bg-color-primary-dark {
+	background-color: $color-primary-dark;
+}
+
+.bg-color-pink {
+	background-color: palevioletred;
+}
+
+.section-title {
+	font-size: 3rem;
+	text-align: left;
+	font-family: "GT Pressura Bold";
+	color: $color-primary-dark;
+
+	span {
+		display: block;
+		font-size: 3.5rem;
+		color: palevioletred;
+		// color: $color-primary-shaded;
+	}
+}
+
+.footer-title {
+	font-size: 2.5rem;
+	text-align: left;
+	font-family: "GT Pressura Bold";
+	color: palevioletred;
+}
+
+.hero {
+	background-color: $color-primary;
+	border-radius: 0 0 25% 0/0 0 70% 0;
+	height: 82vh;
+	width: 95vw;
+	position: relative;
+	top: 0px;
+	z-index: 5;
+
+	&::after {
+		content: "";
+		position: absolute;
+		opacity: 0.7;
+		top: 0;
+		z-index: 15;
+		height: 87vh;
+		width: 95vw;
+		background-color: $color-primary;
+		border-radius: 0 0 25% 0/0 0 70% 0;
+	}
+
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 5;
+	// 	left: 5;
+	// 	height: 90vh;
+	// 	width: 95vw;
+	// 	z-index: 2;
+	// 	opacity: 0.9;
+	// 	background-color: $color-primary-shaded;
+	// 	border-radius: 0 0 25% 0/0 0 70% 0;
+	// }
+}
+
+.hero-content {
+	margin-top: 70px;
+}
+
+.hero-mini {
+	background-color: $color-primary;
+	height: 50vh;
+	width: 100%;
+	padding-top: 50vh;
+	margin-top: -70px;
+}
+
+.divider {
+	width: 100%;
+	// background-color: #ccc;
+	border-bottom: 1.5px solid #ccc;
+	// margin: auto;
+}
+
+.left-border {
+	border-left: 1px solid #aaa;
+}
+
+.bottom-border {
+	border-bottom: 1px solid #aaa;
+}
+
+.navs {
+	position: fixed;
+	top: 0;
+	z-index: 500;
+	display: flex;
+}
+
+// image
+.img-container-left {
+	@include imgContainer();
+	border-radius: 0 7% 40% 0;
+}
+
+.img-container-right {
+	@include imgContainer();
+	border-radius: 7% 0 0 40%;
+}
+
+.img-box {
+	@include imgBox();
+	border-radius: 35% 10% 25% 3%;
+}
+
+.img {
+	position: relative;
+
+	& img {
+		position: absolute;
+		max-width: 127%;
+		max-height: 120%;
+	}
+}
+
+// mobile
+@media screen and (max-width: 600px) {
+	.hero {
+		height: 80vh;
+		width: 100vw;
+		border-radius: 0 0 50% 50%/0 0 20% 20%;
+		z-index: 50 !important;
+		position: relative;
+	}
+
+	.img-container-left {
+		@include imgContainerMobile();
+		border-radius: 0 40% 40% 0;
+	}
+
+	.img-container-right {
+		@include imgContainerMobile();
+		border-radius: 40% 0 0 40%;
+	}
+
+	// .hero-mini {
+	// 	background-color: $color-primary;
+	// 	height: 50vh;
+	// 	width: 100%;
+	// 	padding-top: 50vh;
+	// 	margin-top: -70px;
+	// }
+}

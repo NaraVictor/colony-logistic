@@ -1,0 +1,40 @@
+@import "../common/colors";
+
+.map {
+	width: 80vw;
+	height: 60vh;
+
+	@media screen and (max-width: 600px) {
+		width: 93vw;
+		height: 70vh;
+	}
+}
+
+.float-bottom {
+	padding: 15px;
+	background-color: #eee;
+	margin-bottom: -20px;
+	border-radius: 7px;
+	border: 3px solid $color-primary-dark;
+
+	& a {
+		color: black;
+	}
+
+	& i {
+		color: $color-primary-shaded;
+		margin-right: 7px;
+
+		&::after {
+			content: " | ";
+		}
+	}
+}
+
+.float-group {
+	font-size: 1.2rem;
+	padding: 5px;
+	background-color: #ccc;
+	display: inline-block;
+	border-radius: 6px;
+}

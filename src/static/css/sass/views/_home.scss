@@ -1,0 +1,36 @@
+@import "../common/colors";
+
+// .section-welcome {
+// margin-top: 32vh;
+
+// img {
+// 	max-height: 50vh;
+// }
+
+// @media screen and (max-width: 600px) {
+// 	img {
+// 		height: 40vh;
+// 	}
+
+// 	h3 {
+// 		color: $color-primary-dark !important;
+// 	}
+// }
+// }
+
+// .section {
+// 	img {
+// 		max-height: 50vh;
+// 	}
+// }
+
+.section-social {
+	& i {
+		color: $color-primary-shaded;
+	}
+}
+
+.hero-home {
+	background-image: url("../../static/img/img-1.jpg");
+	background-size: cover;
+}

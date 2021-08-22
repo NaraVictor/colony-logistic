@@ -1,0 +1,40 @@
+.box {
+	border: 4px solid $color-primary-dark;
+	padding: 10px;
+	border-radius: 3px;
+	height: 230px;
+
+	&:hover {
+		background-color: $color-light;
+		transition: background-color 0.25s linear;
+	}
+}
+
+.box-title {
+	font-weight: 900;
+}
+
+.box-body {
+	// display: inline-block; /* or inline-block */
+	text-overflow: ellipsis;
+	word-wrap: normal;
+	overflow: hidden;
+	max-height: 3.2em;
+	line-height: 1.1em;
+}
+
+.box-footer {
+	position: absolute;
+	bottom: 20px;
+}
+
+.float-box {
+	background-color: white;
+	padding: 80px;
+	border-radius: 5px;
+	margin-top: -100px;
+
+	@media screen and (max-width: 600px) {
+		padding: 30px;
+	}
+}
